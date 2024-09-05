@@ -17,9 +17,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   {
-    "your_github_user/your_plugin.nvim",
+    "AlejandroSuero/pop.nvim",
     config = function()
-      require("your_plugin").setup()
+      require("plugin.pop").setup()
     end,
     lazy = false,
     enabled = true,

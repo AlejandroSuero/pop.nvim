@@ -18,7 +18,7 @@ default_target: help
 
 test:
 	@$(call style_calls,"Running tests using nvim")
-	@nvim --headless --noplugin -u ./tests/minimal_init.lua -c "PlenaryBustedDirectory tests/your_plugin { minimal_init = './tests/minimal_init.lua'}"
+	@nvim --headless --noplugin -u ./tests/minimal_init.lua -c "PlenaryBustedDirectory tests/pop { minimal_init = './tests/minimal_init.lua'}"
 	@$(call style_calls,"Done!")
 
 .PHONY: test
@@ -60,8 +60,7 @@ spell-write:
 
 help:
 	@$(call style_calls,"Available targets:")
-	@echo "  test           Run tests with vusted"
-	@echo "  test-nvim      Run tests using nvim and plenary.nvim"
+	@echo "  test			Run tests using nvim and plenary.nvim"
 	@echo "  lint           Run selene and stylua check"
 	@echo "  style-lint     Run style style check"
 	@echo "  format         Run stylua format"
